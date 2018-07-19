@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>实现图片轮换播放</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+      <div class="big_image">
+        <!-- 把大图片分成两个区域，如果鼠标进入做区域就出现左边的箭头，这里在CSS布局时用到了z_index
+      感觉是个不错的思路，把分区这一层放在最上面，既不影响图片的展示，也可以很少的解决箭头显示的问题 -->
+        <div class="prev"></div>
+        <div class="next"></div>
+        <a href="javascript:;" class="mark_left"></a>
+        <a href="javascript:;" class="mark_right"></a>
+
+        <ul>
+          <li style="z-index:1;"><img src="images/1.jpg" alt=""></li>
+          <li><img src="images/2.jpg" alt=""></li>
+          <li><img src="images/3.jpg" alt=""></li>
+          <li><img src="images/4.jpg" alt=""></li>
+          <li><img src="images/5.jpg" alt=""></li>
+          <li><img src="images/6.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div class="small_image">
+        <ul style="width:780px;">
+          <li style="filter:100;opacity:1;"><img src="images/1.jpg" alt=""></li>
+          <li><img src="images/2.jpg" alt=""></li>
+          <li><img src="images/3.jpg" alt=""></li>
+          <li><img src="images/4.jpg" alt=""></li>
+          <li><img src="images/5.jpg" alt=""></li>
+          <li><img src="images/6.jpg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="./js/move.js"></script>
+  <script src="./js/main.js"></script>
+</html>
